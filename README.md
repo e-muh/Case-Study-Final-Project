@@ -40,7 +40,7 @@ Also, we have a link on the hompage for the RESTful implementation of this proje
 
 
 # Built With
-This project is bulit with the following tools:
+This project is built with the following tools:
 
 	
 	Eclipse JEE
