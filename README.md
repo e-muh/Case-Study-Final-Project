@@ -25,12 +25,12 @@ of dismissal, and many other administrative transactions
 Teachers. At this stage teachers as users has not been implemented. When implemented, teachers will be able to login in with their employment ID,
  password and select userType "admin" and be able to: check courses assigned to them (approve or declined), check the course enrolment, set students grades, etc.
 
-This project is design and implemented with a custom security freature. All users must have an account with thier user name, user password and user type stored
+This project is design and implemented with a custom security freature. All users must have an account with their user name, user password and user type stored
 in the users table of the project MySQL databale. Wen a user enters his/her login credentials, the system pulls the record partaining to that credential from 
 the database. If the user name, user password and user type matches with the record from the database, and based on the user type, the user will be redirected
 to the student dashboard, admin dashboard, or teacher dashboard for student, admin, and teacher users respectively. If the record does not match, the user will
-be redirected to the login form where the user can either: enter the correct credentials, change their password if forgotten, or create an account if they do not
-do not have one. With is custom security verification and user authorization, spring security is not envisage for this project.
+be redirected to the login form where the user can either: enter the correct credentials, change their password if forgotten, or create an account if they
+do not have one. With this custom security verification and user authorization, spring security is not envisaged for this project.
 
 Currently, this project has not been fully implemented, only students and admims users has been implemented to above 80%. The requirements keep increasing
 as development proceeds. As such, this project follows the Agile development model, with iterational development and delivery. The next version of this project
@@ -65,7 +65,7 @@ Additional its includes hibernate/orm and the entities are mapped as follows:
 
 User : not mapped to any other entity. isolated.
 Student : @OneToMany mapped to the course entity
-Course : mapping not specified.
+Course : mapping not specified. Expected to be @ManyToOne
 
 Apart from these, no other specific installation requirement is needed as of now. However, ensure your database name is "easylearn". 
 Any other custom name for the database will require the database name to be changed on all configuration settings for the project.
